@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Головоломка 9 квадратов</title>
+	<style type="text/css">
+		.squares-container {
+			display: grid;
+				grid-template-columns: 90px 90px 90px;
+				grid-gap: 20px;
+		}
+		.square {
+			display: flex;
+				justify-content: center;
+				align-items: center;
+			background-color: #123;
+			color: #ddd;
+			font-family: Arial, sans-serif;
+			font-weight: bold;
+			font-size: 20px;
+			width: 30px;
+			height: 30px;
+			border: 30px solid #333;
+			box-shadow: 0 0 0 5px #444;
+		}
+		.square.active {
+			background-color: #7ff;
+			color: #000;
+		}
+	</style>
+</head>
+<body>
+<a href="https://murrey.ru/fun/">◄ Назад ◄</a>
+<p>Есть такая игра, Heroes of the Hammerwatch. Там в одной из головоломок представлено поле из 9 квадратов, 2 из которых горят, а нажатие на любой квадрат зажигает все соседние. При этом начальное поле случайное, но решение всегда нужно найти за 2-3 хода, иначе награда станет хуже.</p>
+<p>Периодически я возвращаюсь в неё для пары забегов, но проходить эту головоломку мне разонравилось ¯\_(ツ)_/¯</p>
+<main class="squares-container">
+	<div class="square">1</div>
+	<div class="square">2</div>
+	<div class="square">3</div>
+	<div class="square">4</div>
+	<div class="square">5</div>
+	<div class="square">6</div>
+	<div class="square">7</div>
+	<div class="square">8</div>
+	<div class="square">9</div>
+</main>
+
+<br>
+<button class="calculate">Найти решение / Solve</button>
+<br>
+
+<p class="output-message"></p>
+
+
+<script src="hoh-lights-out.min.js?0"></script>
+</body>
+</html>
